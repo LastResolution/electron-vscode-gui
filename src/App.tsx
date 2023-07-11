@@ -1,8 +1,10 @@
 import "./App.css";
+import { TitleBar } from "./components/TitleBar";
 
 function App() {
   return (
     <div className="App">
+      <TitleBar />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
