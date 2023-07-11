@@ -1,4 +1,13 @@
 #title-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #3c3c3c;
   height: 30px;
+}
+
+#title {
+  color: #cccccc;
+  font-size: 12px;
+  margin: 0;
 }
