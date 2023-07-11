@@ -7,6 +7,7 @@ const createWidnow = () => {
   const mainWindow = new BrowserWindow({
     width: 500,
     height: 500,
+    frame: false,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
