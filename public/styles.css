@@ -1,8 +1,9 @@
 body {
-  background-color: #000000;
+  background-color: #1e1e1e;
   -webkit-app-region: drag;
 }
 
-button {
-  -webkit-app-region: no-drag;
+#title-bar {
+  background-color: #3c3c3c;
+  height: 30px;
 }
