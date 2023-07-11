@@ -23,6 +23,17 @@ const createWidnow = () => {
     },
   });
   mainWindow.loadURL(mainURL);
+  mainWindow.webContents.openDevTools();
+
+  // focus mainWindow
+  mainWindow.on("focus", () => {
+    console.log("active");
+  });
+
+  // defocus mainWindow
+  mainWindow.on("blur", () => {
+    console.log("deactive");
+  });
 };
 
 app.whenReady().then(() => {
