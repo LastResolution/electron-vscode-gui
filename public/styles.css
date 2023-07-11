@@ -1,0 +1,8 @@
+body {
+  background-color: #000000;
+  -webkit-app-region: drag;
+}
+
+button {
+  -webkit-app-region: no-drag;
+}

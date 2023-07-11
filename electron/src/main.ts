@@ -7,7 +7,12 @@ const createWidnow = () => {
   const mainWindow = new BrowserWindow({
     width: 500,
     height: 500,
-    frame: false,
+    titleBarStyle: "hidden",
+    titleBarOverlay: {
+      color: "#3c3c3c",
+      symbolColor: "#FFFFFFFF",
+      height: 30,
+    },
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
