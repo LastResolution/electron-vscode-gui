@@ -18,7 +18,6 @@ const createWidnow = () => {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,
-      devTools: true,
       preload: path.join(__dirname, "preload.js"),
     },
   });
