@@ -11,4 +11,7 @@
   font-size: 12px;
   margin: 7px;
   margin-left: 135px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
