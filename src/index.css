@@ -1,5 +1,6 @@
 body {
   user-select: none;
+  width: 100%;
   background-color: #1e1e1e;
   -webkit-app-region: drag;
   margin: 0;
