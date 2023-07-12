@@ -10,11 +10,11 @@ const createWidnow = () => {
     frame: true,
     autoHideMenuBar: false,
     titleBarStyle: "hidden",
-    titleBarOverlay: {
-      color: "#3c3c3c",
-      symbolColor: "#cccccc",
-      height: 30,
-    },
+    // titleBarOverlay: {
+    //   color: "#3c3c3c",
+    //   symbolColor: "#cccccc",
+    //   height: 30,
+    // },
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,
@@ -22,7 +22,6 @@ const createWidnow = () => {
     },
   });
   mainWindow.loadURL(mainURL);
-  mainWindow.webContents.openDevTools();
 
   // focus mainWindow
   mainWindow.on("focus", () => {
