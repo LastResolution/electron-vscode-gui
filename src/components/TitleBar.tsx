@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "../css/styles.css";
+import "../css/TitleBar.css";
 import { ControlButton } from "./ControlButton";
 
 export const TitleBar = () => {
