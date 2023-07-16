@@ -7,7 +7,7 @@ export const TitleBar = () => {
   return (
     <nav id="title-bar">
       <div id="empty"></div>
-      <p id="title">App.tsx - electron-vs-code-gui - Visual Studio Code</p>
+      <div id="title">App.tsx - electron-vs-code-gui - Visual Studio Code</div>
       <ControlButton />
     </nav>
   );

@@ -1,16 +1,16 @@
 #title-bar {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
   background-color: #3c3c3c;
   height: 30px;
 }
 
 #title {
+  display: block;
   color: #cccccc;
   font-size: 12px;
   margin: 7px;
-  margin-left: 135px;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
