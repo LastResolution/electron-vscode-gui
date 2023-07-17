@@ -1,9 +1,6 @@
 import { TitleBar } from "./components/TitleBar";
 
 function App() {
-  window.ipcRenderer.on("focus-change", (arg: any) => {
-    console.log(arg.message);
-  });
   return (
     <div className="App">
       <TitleBar />
