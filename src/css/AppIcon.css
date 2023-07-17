@@ -1,9 +1,11 @@
 #app-icon {
   justify-self: start;
+  height: 30px;
+  width: 30px;
 }
 
 #app-icon svg {
   height: 16px;
   width: 16px;
-  padding: 7px;
+  padding: 7px 12px;
 }
