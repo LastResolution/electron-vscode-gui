@@ -24,7 +24,6 @@ const createWidnow = () => {
 
   // focus mainWindow
   mainWindow.on("focus", () => {
-    console.log("active");
     mainWindow.webContents.send("focus-change", {
       message: true,
     });
@@ -32,7 +31,6 @@ const createWidnow = () => {
 
   // defocus mainWindow
   mainWindow.on("blur", () => {
-    console.log("deactive");
     mainWindow.webContents.send("focus-change", {
       message: false,
     });
