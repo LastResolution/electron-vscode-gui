@@ -7,6 +7,8 @@ const createWidnow = () => {
   const mainWindow = new BrowserWindow({
     width: 500,
     height: 500,
+    minHeight: 300,
+    minWidth: 300,
     frame: true,
     autoHideMenuBar: false,
     titleBarStyle: "hidden",
@@ -22,6 +24,7 @@ const createWidnow = () => {
     },
   });
   mainWindow.loadURL(mainURL);
+  mainWindow.webContents.openDevTools();
 
   // focus mainWindow
   mainWindow.on("focus", () => {
