@@ -1,5 +1,6 @@
 export interface IElectronAPI {
   closeApp: () => void;
+  minimizeApp: () => void;
 }
 
 declare global {

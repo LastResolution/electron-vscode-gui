@@ -1,8 +1,14 @@
-import React from "react";
+type Props = {
+  minimizeFunction: () => void;
+};
 
-export const MinimizeButton = () => {
+export const MinimizeButton = (props: Props) => {
   return (
-    <div id="minimize-button" className="control-buttons">
+    <div
+      id="minimize-button"
+      className="control-buttons"
+      onClick={props.minimizeFunction}
+    >
       <svg
         width="16"
         height="16"

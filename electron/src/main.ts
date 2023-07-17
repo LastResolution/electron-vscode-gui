@@ -3,9 +3,10 @@ import path = require("path");
 
 const mainURL = `file:${__dirname}/../../index.html`;
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = "1";
+let mainWindow: BrowserWindow;
 
 const createWidnow = () => {
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 500,
     height: 500,
     minHeight: 300,
@@ -50,7 +51,7 @@ app.on("window-all-closed", () => {
 
 // minimize button click
 ipcMain.handle("minimize-app", () => {
-  app.hide();
+  mainWindow.minimize();
 });
 
 // close button click
