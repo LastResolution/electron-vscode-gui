@@ -8,12 +8,17 @@
 
 .control-buttons {
   width: 47px;
-  height: 50px;
+  height: 30px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.control-buttons svg {
-  display: block;
-  margin: auto;
+#minimize-button:hover,
+#maximize-button:hover {
+  background-color: #565656;
+}
+
+#close-button:hover {
+  background-color: #e81123;
 }
