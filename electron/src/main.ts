@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, ipcMain } from "electron";
 import path = require("path");
 
 const mainURL = `file:${__dirname}/../../index.html`;
@@ -29,11 +29,17 @@ const createWidnow = () => {
   // focus mainWindow
   mainWindow.on("focus", () => {
     console.log("active");
+    mainWindow.webContents.send("focus-change", {
+      message: true,
+    });
   });
 
   // defocus mainWindow
   mainWindow.on("blur", () => {
     console.log("deactive");
+    mainWindow.webContents.send("focus-change", {
+      message: false,
+    });
   });
 };
 
@@ -46,4 +52,8 @@ app.whenReady().then(() => {
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
+});
+
+ipcMain.handle("close-app", () => {
+  app.quit();
 });
