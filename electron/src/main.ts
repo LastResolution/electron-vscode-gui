@@ -2,6 +2,7 @@ import { app, BrowserWindow, ipcMain } from "electron";
 import path = require("path");
 
 const mainURL = `file:${__dirname}/../../index.html`;
+process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = "1";
 
 const createWidnow = () => {
   const mainWindow = new BrowserWindow({
