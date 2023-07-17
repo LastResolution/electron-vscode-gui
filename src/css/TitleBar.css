@@ -1,8 +1,15 @@
 #title-bar {
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
-  background: #3c3c3c;
   height: 30px;
+}
+
+#title-bar.active {
+  background: #3c3c3c;
+}
+
+#title-bar.deactive {
+  background: #323233;
 }
 
 #title {
