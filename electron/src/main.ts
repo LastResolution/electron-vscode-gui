@@ -48,6 +48,11 @@ app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
 });
 
+// minimize button click
+ipcMain.handle("minimize-app", () => {
+  app.hide();
+});
+
 // close button click
 ipcMain.handle("close-app", () => {
   app.quit();
