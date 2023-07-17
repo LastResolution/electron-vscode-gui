@@ -12,12 +12,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.2s ease;
+  transition: 0.1s ease;
 }
 
 #minimize-button:hover,
 #maximize-button:hover {
-  background-color: transparent;
+  background-color: #565656;
 }
 
 #close-button:hover {
