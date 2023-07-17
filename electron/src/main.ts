@@ -48,6 +48,7 @@ app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
 });
 
+// close button click
 ipcMain.handle("close-app", () => {
   app.quit();
 });
