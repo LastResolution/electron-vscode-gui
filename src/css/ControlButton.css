@@ -17,7 +17,7 @@
 
 #minimize-button:hover,
 #maximize-button:hover {
-  background-color: #565656;
+  background-color: transparent;
 }
 
 #close-button:hover {
