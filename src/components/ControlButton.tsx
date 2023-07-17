@@ -9,9 +9,13 @@ export const ControlButton = () => {
     window.electronAPI.closeApp();
   };
 
+  const minimizeApp = () => {
+    window.electronAPI.minimizeApp();
+  };
+
   return (
     <div id="control-button">
-      <MinimizeButton />
+      <MinimizeButton minimizeFunction={minimizeApp} />
       <MaximizeButton />
       <CloseButton closeFunction={closeApp} />
     </div>
