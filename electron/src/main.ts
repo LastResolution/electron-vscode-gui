@@ -13,11 +13,6 @@ const createWidnow = () => {
     frame: true,
     autoHideMenuBar: false,
     titleBarStyle: "hidden",
-    // titleBarOverlay: {
-    //   color: "#3c3c3c",
-    //   symbolColor: "#cccccc",
-    //   height: 30,
-    // },
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,
