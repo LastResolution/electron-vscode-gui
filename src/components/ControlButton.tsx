@@ -5,11 +5,15 @@ import { CloseButton } from "./CloseButton";
 import "../css/ControlButton.css";
 
 export const ControlButton = () => {
+  const closeApp = () => {
+    window.electronAPI.closeApp();
+  };
+
   return (
     <div id="control-button">
       <MinimizeButton />
       <MaximizeButton />
-      <CloseButton />
+      <CloseButton closeFunction={closeApp} />
     </div>
   );
 };

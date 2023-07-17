@@ -1,9 +1,14 @@
-export const CloseButton = () => {
-  const closeApp = () => {
-    window.electronAPI.closeApp();
-  };
+type Props = {
+  closeFunction: () => void;
+};
+
+export const CloseButton = (props: Props) => {
   return (
-    <div id="close-button" className="control-buttons" onClick={closeApp}>
+    <div
+      id="close-button"
+      className="control-buttons"
+      onClick={props.closeFunction}
+    >
       <svg
         width="16"
         height="16"
