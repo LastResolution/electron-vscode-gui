@@ -1,5 +1,5 @@
 export interface IElectronAPI {
-  version: () => string;
+  closeApp: () => void;
 }
 
 declare global {

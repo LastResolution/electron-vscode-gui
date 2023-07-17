@@ -1,8 +1,9 @@
-import React from "react";
-
 export const CloseButton = () => {
+  const closeApp = () => {
+    window.electronAPI.closeApp();
+  };
   return (
-    <div id="close-button" className="control-buttons">
+    <div id="close-button" className="control-buttons" onClick={closeApp}>
       <svg
         width="16"
         height="16"
