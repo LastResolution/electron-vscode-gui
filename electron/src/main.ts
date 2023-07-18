@@ -54,6 +54,15 @@ ipcMain.handle("minimize-app", () => {
   mainWindow.minimize();
 });
 
+// minimize button click
+ipcMain.handle("maximize-app", (event, args) => {
+  if (args.isMaximize) {
+    mainWindow.unmaximize();
+  } else {
+    mainWindow.maximize();
+  }
+});
+
 // close button click
 ipcMain.handle("close-app", () => {
   app.quit();
