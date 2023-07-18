@@ -1,8 +1,14 @@
-import React from "react";
+type Props = {
+  maximizefunction: () => void;
+};
 
-export const MaximizeButton = () => {
+export const MaximizeButton = (props: Props) => {
   return (
-    <div id="maximize-button" className="control-buttons">
+    <div
+      id="maximize-button"
+      className="control-buttons"
+      onClick={props.maximizefunction}
+    >
       <svg
         width="16"
         height="16"
