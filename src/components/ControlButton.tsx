@@ -22,7 +22,7 @@ export const ControlButton = () => {
   return (
     <div id="control-button">
       <MinimizeButton minimizeFunction={minimizeApp} />
-      <MaximizeButton maximizefunction={maximizeApp} />
+      <MaximizeButton maximizefunction={maximizeApp} isMaximize={isMaximize} />
       <CloseButton closeFunction={closeApp} />
     </div>
   );
