@@ -22,7 +22,6 @@ const createWidnow = () => {
     },
   });
   mainWindow.loadURL(mainURL);
-  mainWindow.webContents.openDevTools();
 
   // focus mainWindow
   mainWindow.on("focus", () => {
