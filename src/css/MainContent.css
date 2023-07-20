@@ -1,4 +1,14 @@
 #main-content {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 30px);
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
-  overflow: scroll;
+}
+
+#vs-logo {
+  height: 50%;
+  width: 50%;
+  fill: #151515;
 }
