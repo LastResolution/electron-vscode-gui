@@ -36,6 +36,20 @@ const createWidnow = () => {
       message: false,
     });
   });
+
+  // maximize mainWindow
+  mainWindow.on("maximize", () => {
+    mainWindow.webContents.send("maximize-change", {
+      message: true,
+    });
+  });
+
+  // unmaximize mainWindow
+  mainWindow.on("unmaximize", () => {
+    mainWindow.webContents.send("maximize-change", {
+      message: false,
+    });
+  });
 };
 
 app.whenReady().then(() => {
