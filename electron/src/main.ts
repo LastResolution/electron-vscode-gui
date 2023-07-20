@@ -10,8 +10,8 @@ const createWidnow = () => {
   mainWindow = new BrowserWindow({
     width: 600,
     height: 500,
-    minHeight: 300,
-    minWidth: 300,
+    minHeight: 600,
+    minWidth: 500,
     frame: true,
     autoHideMenuBar: false,
     titleBarStyle: "hidden",
