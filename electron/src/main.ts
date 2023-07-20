@@ -1,5 +1,6 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import path = require("path");
+const { shell } = require("electron");
 
 const mainURL = `file:${__dirname}/../../index.html`;
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = "1";
@@ -49,6 +50,12 @@ const createWidnow = () => {
     mainWindow.webContents.send("maximize-change", {
       message: false,
     });
+  });
+
+  // open browser
+  mainWindow.webContents.on("will-navigate", (e, url) => {
+    e.preventDefault();
+    shell.openExternal(url);
   });
 };
 
