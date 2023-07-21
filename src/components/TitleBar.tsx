@@ -6,7 +6,7 @@ import { AppIcon } from "./AppIcon";
 export const TitleBar = () => {
   const [isActive, setActive] = useState(true);
   window.ipcRenderer.on("focus-change", (arg: any) => {
-    setActive(arg.message);
+    setActive(arg.isActive);
   });
   return (
     <nav id="title-bar" className={`${isActive ? "active" : "deactive"}`}>

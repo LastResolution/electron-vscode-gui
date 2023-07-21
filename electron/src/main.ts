@@ -26,14 +26,14 @@ const createWidnow = () => {
   // focus mainWindow
   mainWindow.on("focus", () => {
     mainWindow.webContents.send("focus-change", {
-      message: true,
+      isActive: true,
     });
   });
 
   // defocus mainWindow
   mainWindow.on("blur", () => {
     mainWindow.webContents.send("focus-change", {
-      message: false,
+      isActive: false,
     });
   });
 
