@@ -8,7 +8,7 @@ export const ControlButton = () => {
   const [isMaximize, setMaximize] = useState(false);
 
   window.ipcRenderer.on("maximize-change", (args: any) => {
-    setMaximize(args.message);
+    setMaximize(args.isMaximize);
   });
 
   const closeApp = () => {

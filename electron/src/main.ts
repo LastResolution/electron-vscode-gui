@@ -40,14 +40,14 @@ const createWidnow = () => {
   // maximize mainWindow
   mainWindow.on("maximize", () => {
     mainWindow.webContents.send("maximize-change", {
-      message: true,
+      isMaximize: true,
     });
   });
 
   // unmaximize mainWindow
   mainWindow.on("unmaximize", () => {
     mainWindow.webContents.send("maximize-change", {
-      message: false,
+      isMaximize: false,
     });
   });
 
